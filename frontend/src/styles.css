@@ -1,0 +1,11 @@
+body { font-family: Inter, system-ui, Arial, sans-serif; margin: 16px; color: #222; }
+header { margin-bottom: 12px; }
+.app h1 { margin: 0 0 8px 0 }
+.table-section { margin-bottom: 24px; }
+.table-wrapper { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+th { background: #f7f7f7; }
+.charts { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.chart { background: #fff; padding: 12px; border: 1px solid #eee; border-radius: 6px; min-height: 240px }
+.error { color: #b00020 }
