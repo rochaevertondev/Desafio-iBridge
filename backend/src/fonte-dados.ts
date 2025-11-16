@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { DataSource } from 'typeorm';
 import { Campanha } from './entidades/campanha.entidade';
 import { Lista } from './entidades/lista.entidade';
@@ -8,12 +9,12 @@ import { Contato } from './entidades/contato.entidade';
 import { Chamada } from './entidades/chamada.entidade';
 
 const FonteDados = new DataSource({
-  type: 'mysql',
-  host: 'localhost',
-  port: 3306,
-  username: 'root',
-  password: 'Nirv@n@1',
-  database: 'ibridge_db',
+  type: (process.env.DB_TYPE) as any,
+  host: process.env.DB_HOST,
+  port: Number(process.env.DB_PORT),
+  username: process.env.DB_USERNAME,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
   entities: [
     Campanha,
     Lista,
